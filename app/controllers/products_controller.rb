@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy, :favorite]
 
   def index
+     p 'iiiiiiiiiiiiiiiiiiiiiiiiiiiiii'
     if sort_params.present?
       @sorted = sort_params[:sort]
       @category = Category.request_category(sort_params[:sort_category])
@@ -18,16 +19,19 @@ class ProductsController < ApplicationController
   end
 
   def show
+    p 'sssssssssssssssssssssssssssssss'
     @reviews = @product.reviews
     @review = @reviews.new
   end
 
   def new
+    p 'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn'
     @product = Product.new
     @categories = Category.all
   end
 
   def create
+    p 'cccccccccccccccccccccccccccccc'
     @product.save
     redirect_to product_url @product
   end

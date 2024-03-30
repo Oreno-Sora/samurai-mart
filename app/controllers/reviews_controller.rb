@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   def create
+    p "***********************************"
     product = Product.find(params[:product_id])
     review = product.reviews_new
     review.save_review(review, review_params)
