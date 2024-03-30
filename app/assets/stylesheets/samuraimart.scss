@@ -161,3 +161,31 @@ label {
 .samuraimart-header-shoppingcart-icon {
   color: #ffffff;
 }
+
+.samuraimart-favorite-button {
+  border-radius: 2px;
+  border: solid 1px #0fbe9f;
+  background-color: #ffffff;
+}
+
+.text-favorite {
+  color: #0fbe9f;
+}
+
+.samuraimart-sidebar-category-label {
+  width: 156px;
+  height: 20px;
+  font-family: YuGo;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #191919;
+}
+
+.user-edit-label {
+  cursor: pointer;
+  cursor: hand;
+}
