@@ -7,7 +7,7 @@ class Product < ApplicationRecord
  
   scope :display_list, -> (page) { page(page).per(PER) }
   scope :on_category, -> (category) { where(category_id: category) }
-   scope :sort_order, -> (order) { order(order) }
+  scope :sort_order, -> (order) { order(order) }
  
    scope :category_products, -> (category, page) { 
      on_category(category).
@@ -15,6 +15,7 @@ class Product < ApplicationRecord
    }
  
    scope :sort_products, -> (sort_order, page) {
+    p '****sort_products-----------------'
      on_category(sort_order[:sort_category]).
      sort_order(sort_order[:sort]).
      display_list(page)
@@ -32,5 +33,9 @@ class Product < ApplicationRecord
   
   def reviews_new
     reviews.new
+  end
+  
+  def reviews_with_id
+     reviews.reviews_with_id
   end
 end
