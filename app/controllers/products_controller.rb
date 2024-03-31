@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     p 'sssssssssssssssssssssssssssssss'
     @reviews = @product.reviews_with_id    # 表示用すでにあるレビュー群
     @review = @reviews.new                 # 今回書き込み用レビュー
-    @star_repeat_select = Review.star_repeat_select    # 評価入力用雛形
+    @star_repeat_select = Review.star_repeat_select    # 評価入力用の雛形
   end
 
   def new
