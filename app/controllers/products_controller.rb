@@ -25,27 +25,6 @@ class ProductsController < ApplicationController
     @star_repeat_select = Review.star_repeat_select    # 評価入力用の雛形
   end
 
-  def new
-    p 'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn'
-    @product = Product.new
-    @categories = Category.all
-  end
-
-  def create
-    p 'cccccccccccccccccccccccccccccc'
-    @product.save
-    redirect_to product_url @product
-  end
-
-  def edit
-    @categories = Category.all
-  end
-
-  def update
-    @product.update(product_params)
-    redirect_to product_url @product
-  end
-
   def destroy
     @product.destroy
     redirect_to products_url
